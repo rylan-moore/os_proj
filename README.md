@@ -6,7 +6,9 @@ Low cost edge computing is made possible by the raspberry pi. This work looks at
 Raspberry Pi 4B 4GB, 256GB SATA SSD connected over USB-3, Argon One case with Active Cooling Fan, Official RPI USB-C PSU, 32-bit Raspian Bullseye. 
 
 Test of the SSD to confirm performance: 
-Random write speed 13266 IOPS (target 500) - PASS
+
+Random write speed 13266 IOPS (target 500) - PASS 
+
 Random read speed 13768 IOPS (target 1500) - PASS
 
 CPU Frequency:
