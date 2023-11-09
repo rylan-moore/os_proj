@@ -18,6 +18,9 @@ There are many different container solutions available on Raspberry Pi. To start
 ## Local Configuration
 To run the python benchmark locally java and python3 need to be installed via apt, then pyspark can be installed with pip. 
 
+## Images
+
+
 ## Results
 Below are the results from the benchmark. The CPU temperature was allowed to return to 48 Degrees Celcius beetween runs. 
 |         | Local (s) | Docker (s) | 
