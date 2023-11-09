@@ -19,6 +19,11 @@ There are many different container solutions available on Raspberry Pi. To start
 To run the python benchmark locally java and python3 need to be installed via apt, then pyspark can be installed with pip. 
 
 ## Images
+![spark](https://github.com/rylan-moore/os_proj/assets/70982815/a89fdb61-c493-41d0-8f4f-5e96b3af4883)
+Image of the spark webserver showing work running. 
+![portainer](https://github.com/rylan-moore/os_proj/assets/70982815/32a100c6-613c-4795-af03-aa743008e844)
+Image of the portainer webserver where the Docker container for benchmarking is run from. 
+
 
 
 ## Results
