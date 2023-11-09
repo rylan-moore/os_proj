@@ -23,9 +23,12 @@ apat63_99.txt.gz:
 	wget 'https://github.com/cu-csci-4253-datacenter/lab4-pyspark-patent-data/raw/master/apat63_99.txt.gz'
 
 docker_build:
-	docker build -f Dockerfile -t spark-server .
+	sudo docker build -f Dockerfile -t spark-server .
 
 docker_tag:
-	docker tag spark-server $(DOCKERUSER)/spark-server:latest
+	sudo docker tag spark-server $(DOCKERUSER)/spark-server:latest
 docker_push:
-	docker push $(DOCKERUSER)/spark-server:latest
+	sudo docker push $(DOCKERUSER)/spark-server:latest
+
+docker_manager:
+	sudo docker run --restart always -d -p 9005:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:linux-arm
