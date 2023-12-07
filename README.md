@@ -31,13 +31,13 @@ Image of the portainer webserver where the Docker container for benchmarking is 
 ## Results
 Below are the results from the benchmark. The CPU temperature was allowed to return to 50 Degrees Celcius beetween runs. RAM usage was collected from HTOP running concurrently with the benchmark. 
 |         | Local (s) | Local RAM (MB)| Docker cold start (s) |Docker cold start RAM (MB)| Docker warm start (S) | Docker warm start RAM (MB) |
-|:--------|:---------:|:----------:|:--------:|
+|:--------|:---------:|:----------:|:--------:|:-:|:-:|:-:|
 | Run 1   | 290.41 | 1268 | 350.29 | 1330 | 331.59 | 1346 |
 | Run 2   | 297.12 | 1271 | 340.66 | 1337 | 347.52 | 1350 |
 | Run 3   | 302.56 | 1301 | 339.27 | 1329 | 333.42 | 1353 |
 | Run 4   | 287.42 | 1289 | 336.43 | 1336 | 330.06 | 1347 |
 | Run 5   | 308.00 | 1278 | 331.78 | 1345 | 329.31 | 1353 |
-| Average | 297.10 || 339.69 | |  |  |
+| Average | 297.10 | 1281.4 | 339.69 | 1335.4 | 334.38 | 1349.8 |
 
 ### Running two copies of the container at once
 
