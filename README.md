@@ -1,12 +1,14 @@
 ## Rylan Moore - Advanced Operating Systems Semester Project
 # Running PySpark workloads on the Raspberry Pi 4
-Low cost edge computing is made possible by the raspberry pi. This work looks at the feasibility of using containerized software on the Raspberry Pi to deploy such work. For testing a benchmark was created. Based on PySpark and adapted from CSCI 4253 Lab 4 of Datacenter Scale Computing from CU Boulder the program timed_dataframe.py is run. This program does large data operations that result in a table of patents sorted by the number of times they are cited by other patents in the list. This program reports the time it takes for the entire program to run including loading the two large dataset files, joining and sorting data, and reporting results. 
+Low cost edge computing is made possible by the raspberry pi. This work looks at the feasibility of using containerized software on the Raspberry Pi to deploy such work. For testing a benchmark was created. Based on PySpark and adapted from CSCI 4253 Lab 4 of Datacenter Scale Computing from CU Boulder. The program timed_dataframe.py is the resulting benchmark program. This program does large data operations that result in a table of patents sorted by the number of times they are cited by other patents in the list. This program reports the time it takes for the entire program to run including loading the two large dataset files, joining and sorting data, and reporting results. 
 
 ## Hardware
 Raspberry Pi 4B 4GB, 256GB SATA SSD connected over USB-3, Argon One case with Active Cooling Fan, Official RPI USB-C PSU, 32-bit Raspian Bullseye. 
 
 Test of the SSD to confirm performance: 
-Random write speed 13266 IOPS (target 500) - PASS
+
+Random write speed 13266 IOPS (target 500) - PASS 
+
 Random read speed 13768 IOPS (target 1500) - PASS
 
 CPU Frequency:
@@ -17,6 +19,14 @@ There are many different container solutions available on Raspberry Pi. To start
 
 ## Local Configuration
 To run the python benchmark locally java and python3 need to be installed via apt, then pyspark can be installed with pip. 
+
+## Images
+![spark](https://github.com/rylan-moore/os_proj/assets/70982815/a89fdb61-c493-41d0-8f4f-5e96b3af4883)
+Image of the spark webserver showing work running. 
+![portainer](https://github.com/rylan-moore/os_proj/assets/70982815/32a100c6-613c-4795-af03-aa743008e844)
+Image of the portainer webserver where the Docker container for benchmarking is run from. 
+
+
 
 ## Results
 Below are the results from the benchmark. The CPU temperature was allowed to return to 50 Degrees Celcius beetween runs. RAM usage was collected from HTOP running concurrently with the benchmark. 
