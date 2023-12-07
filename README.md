@@ -46,7 +46,7 @@ Below are the results from the benchmark. The CPU temperature was allowed to ret
 |Time (s)| 510.31 | 523.86|
 |RAM use (MB)| 1335 | 1329 | 
 
-### Running four copies of the container at once results in the pi crashing
+### Running four copies of the container at once results in the pi crashing once memory use starts to increase in the later half of the benchmark.
 
 ## Top 10 rows from Output Table - Count is what gets appended and sorted by
 |PATENT|GYEAR|GDATE|APPYEAR|COUNTRY|POSTATE|ASSIGNEE|ASSCODE|CLAIMS|NCLASS|CAT|SUBCAT|CMADE|CRECEIVE|RATIOCIT|GENERAL|ORIGINAL|FWDAPLAG|BCKGTLAG|SELFCTUB|SELFCTLB|SECDUPBD|SECDLWBD|COUNT|
