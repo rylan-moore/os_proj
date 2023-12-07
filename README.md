@@ -19,15 +19,24 @@ There are many different container solutions available on Raspberry Pi. To start
 To run the python benchmark locally java and python3 need to be installed via apt, then pyspark can be installed with pip. 
 
 ## Results
-Below are the results from the benchmark. The CPU temperature was allowed to return to 48 Degrees Celcius beetween runs. 
-|         | Local (s) | Docker (s) | 
-|:--------|:---------:|:----------:|
-| Run 1   | 290.41 | 350.29 |
-| Run 2   | 297.12 | 340.66 |
-| Run 3   | 302.56 | 339.27 |
-| Run 4   | 287.42 | 336.43 |
-| Run 5   | 308.00 | 331.78 |
-| Average | 297.10 | 339.69 |
+Below are the results from the benchmark. The CPU temperature was allowed to return to 50 Degrees Celcius beetween runs. RAM usage was collected from HTOP running concurrently with the benchmark. 
+|         | Local (s) | Local RAM (MB)| Docker cold start (s) |Docker cold start RAM (MB)| Docker warm start (S) | Docker warm start RAM (MB) |
+|:--------|:---------:|:----------:|:--------:|
+| Run 1   | 290.41 | 1268 | 350.29 | 1330 | 331.59 | 1346 |
+| Run 2   | 297.12 | 1271 | 340.66 | 1337 | 347.52 | 1350 |
+| Run 3   | 302.56 | 1301 | 339.27 | 1329 | 333.42 | 1353 |
+| Run 4   | 287.42 | 1289 | 336.43 | 1336 | 330.06 | 1347 |
+| Run 5   | 308.00 | 1278 | 331.78 | 1345 | 329.31 | 1353 |
+| Average | 297.10 || 339.69 | |  |  |
+
+### Running two copies of the container at once
+
+||Continer 1|Container 2|
+|:-:|:-:|:-:|
+|Time (s)| 510.31 | 523.86|
+|RAM use (MB)| 1335 | 1329 | 
+
+### Running four copies of the container at once results in the pi crashing
 
 ## Top 10 rows from Output Table - Count is what gets appended and sorted by
 |PATENT|GYEAR|GDATE|APPYEAR|COUNTRY|POSTATE|ASSIGNEE|ASSCODE|CLAIMS|NCLASS|CAT|SUBCAT|CMADE|CRECEIVE|RATIOCIT|GENERAL|ORIGINAL|FWDAPLAG|BCKGTLAG|SELFCTUB|SELFCTLB|SECDUPBD|SECDLWBD|COUNT|

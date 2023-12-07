@@ -15,4 +15,5 @@ COPY apat63_99.txt.gz cite75_99.txt.gz /app/
 EXPOSE 4040
 CMD cd /app && \
     python3 timed_dataframe.py 
+# CMD tail -f /dev/null
 
